@@ -1,4 +1,6 @@
 #function that merges FTIR spectra from same genotype
+#structure of file name is GENiRj.csv where i is an index between 1 and n and R is a number between 1 and n. 
+#The function merges the files with the same j with different i and does the same for all the j.
 spectramerge = function(mypath){
   for (i in 1:49){
     for (j in 1:3){
@@ -8,4 +10,4 @@ spectramerge = function(mypath){
     write.csv(Tbl, paste("GEN", i, "R", j, ".csv", sep=""))
   }
 }
-}#worked well
+}
